@@ -1,0 +1,91 @@
+extends layout
+
+block content
+
+	.container
+		.section
+			h1 Services
+			.main
+				.services
+					.himage
+						a(href='services/physicaltherapy.php')
+							img(src='images/hero1.jpg', alt='services')
+						h2#physyicaltherapy Physical Therapy
+					p
+						| We are passionate about what we do, and we take great pride in our ability to help people get back to normal life activities. Our promise is to provide you with the best care possible to get you back to doing the activities you enjoy most in life.
+					p
+						| Our clinicians utilize a combination of manual physical therapy and therapeutic exercise, along with modalities 
+						| to help alleviate symptoms associated with various musculoskeletal and orthopedic conditions. We focus on 
+						| correcting biomechanical dysfunctions and muscle imbalances,  improving flexibility and strength, 
+						| restoring proper joint alignment, and providing guidance and education to help you maintain these improvements. 
+						a(href='services/physicaltherapy.php') Read more
+					br
+					h2 C. Foster Physical Therapy offers Fellowship-Trained Physical Therapists
+					br
+					p
+						| Fellowship-Trained Physical Therapist (FAAOMPT) have completed extensive post-graduate training in orthopedic and manual therapy to effectively identify and treat movement dysfunctions.
+						img(src='images/Lumbar_manipulation_inline.jpg', alt='test', align='left', style='margin: 10px 10px 0px 0px;')
+						|  Less than 1% of all licensed physical therapists are fellow-ship trained.
+						|             Whether you are trying to stand up without pain or improve your sports performance, our fellowship
+						|             trained physical therapists are highly skilled in assessing abnormal movement patterns to determine where to focus and individualize treatment. Finding the ultimate
+						|             cause of the pain will resolve the problem and help you reach your goals.
+				//
+					<h2>Other Services</h2>
+					<p>Click image or call us for more information.</p>
+					<div class="services">
+					<div class="service left">
+					<div class="himage">
+					<a href="services/spineclinic.php"><img src="images/spine1.jpg" alt="total spine specialty clinic" /></a>
+					<h3 id="spineclinic">Total Spine Speciality Clinic</h3>
+					</div>
+					</div>
+					<div class="service right">
+					<div class="himage">
+					<a href="services/sports.php"><img src="images/sports1.jpg" alt="sports performance" /></a>
+					<h3 id="sports">Sports Performance + Testing</h3>
+					</div>
+					</div>
+					<div class="clear"></div>
+					</div>
+					<div class="services">
+					<div class="service left">
+					<div class="himage">
+					<a href="services/industrialrehab.php"><img src="images/industrial1.jpg" alt="industrial rehab" /></a>
+					<h3 id="rehab">Industrial Training + Rehab</h3>
+					</div>
+					</div>
+					<div class="service right">
+					<div class="himage">
+					<a href="services/psych.php"><img src="images/psych1.jpg" alt="psychological services" /></a>
+					<h3 id="psychological">Pyschological Services</h3>
+					</div>
+					</div>
+					<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+					</div>
+			.side
+				.box
+					h1 Other Services
+					ul.servicemenu
+						li
+							h2
+								a(href='services/spineclinic.php') Total Spine Specialty Clinic
+								a(href='services/spineclinic.php')
+									img(src='images/spine1.jpg', alt='total spine specialty clinic', style='max-width: 100%; max-height: 100%;')
+						li
+							h2
+								a(href='services/sports.php') Sports Performance
+								a(href='services/sports.php')
+									img(src='images/sports1.jpg', alt='sports performance', style='max-width: 100%; max-height: 100%;')
+						li
+							h2
+								a(href='services/industrialrehab.php') Industrial Testing + Rehab
+								a(href='services/industrialrehab.php')
+									img(src='images/industrial1.jpg', alt='industrial rehab', style='max-width: 100%; max-height: 100%;')
+						li
+							h2
+								a(href='services/psych.php') Psychological Services
+								a(href='services/psych.php')
+									img(src='images/psych1.jpg', alt='psychological services', style='max-width: 100%; max-height: 100%;')
+			.clear
