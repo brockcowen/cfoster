@@ -22,7 +22,7 @@ a:active {color: #ed145b;text-decoration: none}
 
 
 .headercon{
-	background:url(../images/bgfiller.png) 0 -10px repeat-x;
+	background:url(bgfiller.png) 0 -10px repeat-x;
 	border-bottom:1px solid #ccc;
 }
 
@@ -30,7 +30,7 @@ a:active {color: #ed145b;text-decoration: none}
 .header {
 	width:940px;
 	margin:0 auto;
-	background: url(../images/header2.png) no-repeat;
+	background: url(header2.png) no-repeat;
 
 }
 .header ul {
