@@ -1,0 +1,19 @@
+{
+  "name": "cfoster",
+  "version": "1.0.0",
+  "description": "This is the repository for the C Foster + Associates Website. Maintained by Brock C. Owen.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brockcowen/cfoster.git"
+  },
+  "author": "Brock C. Owen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brockcowen/cfoster/issues"
+  },
+  "homepage": "https://github.com/brockcowen/cfoster#readme"
+}
