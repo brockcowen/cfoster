@@ -1,5 +1,38 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	#top.container
+		.dumbCrossFade.hero
+			.dumbItem
+				a(href='services/physicaltherapy.php')
+				img(src='images/carousel4.jpg', alt='physical therapy')
+			.dumbItem
+				a(href='therapists.php')
+					img(src='images/Newtherapistslide.jpg', alt='meet our therapists')
+		.section
+			.main
+				h2
+					span Welcome to C. Foster + Associates
+				p
+					| Our mission is to provide the highest quality of physical therapy care available in the greater Houston area.  We are committed to working with active adults and athletes to treat overuse injuries, rehab from surgery, prevent future injuries, improve performance, and promote wellness by managing your overall health and fitness.
+				p
+					| We have expanded our 
+					a(href='services.php') clinical services
+					|  to include fitness programs, fitness testing with science-based training programs/services, specialized spine care programs, industrial testing and return-to-work programs, ergonomic and injury prevention programs, and psychological counseling for injury/pain management and sports performance.
+				p
+					| So whether you just had surgery, trying to prevent it, or seeking to gain a competitive edge, we're here for you.  Please stop by and visit one of our new facilities!
+				h3 Praise for C. Foster + Associates:
+				.testimonial
+					.quotebox
+						| Thank you for all your support and care over the last few weeks. I appreciate C. Foster + Associates providing opportunities for such cases like mine. I hope to continue improving my health and growing stronger each day. Both of you showed genuine care and provided a delightful and hopeful atmosphere for recovery, exactly what healthcare should be. Thank you again.
+					.cite Lyndsey S.
+				.sublink
+					a(href='testimonials.php') More testimonials from satisfied C. Foster + Associates patients
+			.side
+				.box
+					p
+						strong C. Foster + Associates
+						|  C. Foster + Associates is a physical therapy provider with branches in Pasadena, Bellaire, Pearland, and South Shore.
+						br
+						a(href='#locations') View our locations here.
+
