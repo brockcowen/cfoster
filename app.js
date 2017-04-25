@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var firebase= require('firebase');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var services = require('./routes/services');
@@ -31,7 +31,15 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
+var fbconfig = {
+    apiKey: "[APIKey]",
+    authDomain: "[authDomain]",
+    databaseURL: "[databaseURL]",
+    projectId: "[projectId]",
+    storageBucket: "[storageBucket]",
+    messagingSenderId: "[messagingSenderId]"
+};
+firebase.initializeApp(fbconfig)
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
