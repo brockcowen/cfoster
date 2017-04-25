@@ -9,5 +9,7 @@ router.get('/', function(req, res, next){
 router.get('/industrialrehab', function(req, res){
 	res.render('industrialrehab');
 });
-router.get('')
+router.get('/physicaltherapy', function(req, res){
+	res.render('physicaltherapy')
+})
 module.exports = router;
