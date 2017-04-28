@@ -20,7 +20,7 @@
 				
 				var name = nameInput.value;
 				var email= emailInput.value;
-
+				//check and send status
 				if (name && email){
 					console.log(name+' '+email)
 					frmStatusDiv.innerHTML= "<div class='alert success'>"+
@@ -89,7 +89,6 @@
     				}
 				}
 				}
-			
 			}
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() {
@@ -101,7 +100,12 @@
 			modal.style.display = "none";
 			}
 			}
-
+				var database = firebase.database().ref('messages');
+  res.render('modal');
+  var messagesRef = database;
+  messagesRef.on('value', function(snapshot){
+  	console.log(snapshot.val());
+  })
         // Get the parent of <span class="closebtn"> (<div class="alert">)
        
 

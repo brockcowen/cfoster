@@ -8,7 +8,11 @@ html
 		link(rel='stylesheet', href='/javascripts/fancybox/fancybox/jquery.fancybox-1.3.4.css', type='text/css', media='screen')
 		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
 		script(type='text/javascript', src='/javascripts/smoothscroll.js')
-		
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
 		script(type='text/javascript', src='/javascripts/jquery.dumbcrossfade-2.0.js')
 		link(rel='stylesheet', media='screen', type='text/css', href='https://jqueryvalidation.org/files/demo/site-demos.css')
 		
@@ -37,11 +41,14 @@ html
 						a(href='/testimonials') Testimonials
 					li
 						a(href='#locations') Locations
-					a.social(href='https://www.facebook.com/pages/C-Foster-Associates/242246995322')
-						img.social(src='/images/fb-footer2.png', width='70', height='36', alt='C Foster on Facebook')
-					a.social(href='https://twitter.com/CFosterRehab')
+						br
+						br
+					li.social.right(href='https://www.facebook.com/pages/C-Foster-Associates/242246995322')
+						img.social.right(src='/images/fb-footer2.png', width='70', height='36', alt='C Foster on Facebook')
+					li.social.right(href='https://twitter.com/CFosterRehab')
 						img.social(src='/images/tw-footer2.png', width='70', height='36', alt='C Foster on Twitter')
-					button#myBtn Sign up for our Newsletter!
+					li.button.button#myBtn 
+						span Sign up for our Newsletter!
 
 				// <li><a href="../zone.php">The Zone Sports Complex</a></li>
 		block content
@@ -51,11 +58,11 @@ html
 				
 
 				.modal-header
-					h3 Please Fill out this form to sign up for our Monthly Newsletter!
+					h4 Please Fill out this form to sign up for our Monthly Newsletter!
 					
 				.modal-body
 					#statusDiv
-					span.close x				
+					span.close &times;				
 					form#newsletterForm(action='/newsletter', method='POST')
 					| Name:  
 					input#name(type='text', name='name' hint='First Last', required="true") 
@@ -63,7 +70,8 @@ html
 					|     Email Address:  
 					input#email(type='text', name='email', email='true', required='true', hint='user@example.com')
 					br
-					button#subBtn Sign Up
+					button.button#subBtn 
+						span Sign Up
 				br
 				.modal-footer
 					p test footer

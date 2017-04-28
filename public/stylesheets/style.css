@@ -6,8 +6,8 @@ a:hover{text-decoration:underline;}
 a:active{color:#ed145b;text-decoration:none}
 .headercon{background:url(bgfiller.png) 0 -10px repeat-x;border-bottom:1px solid #ccc;}
 .header{width:940px;margin:0 auto;background:url(header2.png) no-repeat;}
-.header ul{padding-left:9px;padding-top:80px;padding-bottom:20px;}
-.header ul li{display:inline;margin-right:20px;}
+.header ul{padding-left:15px;padding-top:80px;padding-bottom:20px;}
+.header ul li{display:inline;margin-right:35px;}
 .header ul li p{display:inline;margin-right:20px;}
 .header ul li a{padding:2px;}
 .header ul li a:link{color:#094157;}
@@ -121,7 +121,7 @@ a.cyclenav{width:15px;height:17px;background:url(../images/btn-cycle.png) no-rep
 			margin: auto;
 			padding: 0;
 			border: 1px solid #888;
-			width: 80%;
+			width: 50%;
 			font-family:Arial, Helvetica, sans-serif;line-height:1.4;
 			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 			-webkit-animation-name: animatetop;
@@ -193,3 +193,41 @@ a.cyclenav{width:15px;height:17px;background:url(../images/btn-cycle.png) no-rep
 }
 
 ul.no-bullet{list-style-type:none;}
+.button {
+  border-radius: 4px;
+  background-color: #094157;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
