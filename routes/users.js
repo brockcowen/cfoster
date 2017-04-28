@@ -7,7 +7,7 @@ var firebase = require('firebase')
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 	var database = firebase.database().ref('messages');
-  res.send('respond with a resource');
+  res.render('modal');
   var messagesRef = database;
   messagesRef.on('value', function(snapshot){
   	console.log(snapshot.val());

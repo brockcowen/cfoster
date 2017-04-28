@@ -6,12 +6,20 @@ var firebase= require('firebase');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/newsletter', function(req, res){
-	var database = firebase.database().ref('messages');
-	 var messagesRef = database;
-  messagesRef.on('value', function(snapshot){
-  	console.log(snapshot.val());
+// test to verify firebase connect
+
+
+router.post('/newsletter', function(req, res, next){
+	var database = firebase.database().ref('newsletterSignup')
+	var newsletterSignupKey= firebase.database().ref().child('newsletterSignup').push().key;
+var postData = {
+	email: 'testdata'
+}
+	var updates = {};
+	updates['/newsletterSignup/' + newsletterSignupKey ] = postData;
+	updates['/emailList']= postData.email;
+ return firebase.database().ref().update(updates);
 
 })
-})
+
 module.exports = router;

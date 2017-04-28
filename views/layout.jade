@@ -8,13 +8,17 @@ html
 		link(rel='stylesheet', href='/javascripts/fancybox/fancybox/jquery.fancybox-1.3.4.css', type='text/css', media='screen')
 		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
 		script(type='text/javascript', src='/javascripts/smoothscroll.js')
+		
 		script(type='text/javascript', src='/javascripts/jquery.dumbcrossfade-2.0.js')
+		link(rel='stylesheet', media='screen', type='text/css', href='https://jqueryvalidation.org/files/demo/site-demos.css')
+		
 		script(type='text/javascript').
 			/* <![CDATA[ */
 			$(function() {
 			$('.dumbCrossFade .dumbItem').dumbCrossFade({'slideType':'slidevertical','fadeInOut':true,});
 			});
 			/* ]]> */
+		
 	body
 		script(src='https://www.gstatic.com/firebasejs/3.7.4/firebase.js')
 		//insert firebase init
@@ -37,8 +41,37 @@ html
 						img.social(src='/images/fb-footer2.png', width='70', height='36', alt='C Foster on Facebook')
 					a.social(href='https://twitter.com/CFosterRehab')
 						img.social(src='/images/tw-footer2.png', width='70', height='36', alt='C Foster on Twitter')
+					button#myBtn Sign up for our Newsletter!
+
 				// <li><a href="../zone.php">The Zone Sports Complex</a></li>
 		block content
+
+		#myModal.modal
+			.modal-content
+				
+
+				.modal-header
+					h3 Please Fill out this form to sign up for our Monthly Newsletter!
+					
+				.modal-body
+					#statusDiv
+					span.close x				
+					form#newsletterForm(action='/newsletter', method='POST')
+					| Name:  
+					input#name(type='text', name='name' hint='First Last', required="true") 
+					br
+					|     Email Address:  
+					input#email(type='text', name='email', email='true', required='true', hint='user@example.com')
+					br
+					button#subBtn Sign Up
+				br
+				.modal-footer
+					p test footer
+				
+		
+
+
+		
 		#locations.footer
 			.wrapper
 				.lbox.first
@@ -113,7 +146,9 @@ html
 					a(href='https://twitter.com/CFosterRehab')
 						img(src='/images/tw-footer2.png', width='70', height='36', alt='C Foster on Twitter')
 			.clear
+		script(type='text/javascript', src='/javascripts/main.js')
 		script(type='text/javascript', src='http://twitter.com/javascripts/blogger.js')
+		script(type='text/javascript', src='http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js')
 		script(type='text/javascript', src='http://twitter.com/statuses/user_timeline/cfosterpt.json?callback=twitterCallback2&count=1')
 		script(type='text/javascript').
 			var _gaq = _gaq || [];
