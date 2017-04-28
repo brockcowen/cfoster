@@ -21,11 +21,14 @@
 				var newsletterSignupKey= firebase.database().ref().child('newsletterSignup').push().key;
 					var postData = {
 						email: email,
-						name: name
+						name: name,
+						newsletter: true,
+						timestamp: Date.now()
 							}
 					var updates = {};
-						updates['/newsletterSignup/' + newsletterSignupKey ] = postData;
-						updates['/emailList/'+ postData.email]= newsletterSignupKey;
+						updates['/emailList/' + newsletterSignupKey ] = postData;
+						
+
  							return firebase.database().ref().update(updates);
 			}
 			submitBtn.onclick = function(){
