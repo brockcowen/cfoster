@@ -32,12 +32,12 @@ app.use(function(req, res, next) {
   next(err);
 });
 var fbconfig = {
-    apiKey: "[APIKey]",
-    authDomain: "[authDomain]",
-    databaseURL: "[databaseURL]",
-    projectId: "[projectId]",
-    storageBucket: "[storageBucket]",
-    messagingSenderId: "[messagingSenderId]"
+ apiKey: "AIzaSyBQ5RotqJwPRQAdcz3WEytPuo-CgePutEE",
+    authDomain: "cfosterwebsite.firebaseapp.com",
+    databaseURL: "https://cfosterwebsite.firebaseio.com",
+    projectId: "cfosterwebsite",
+    storageBucket: "cfosterwebsite.appspot.com",
+    messagingSenderId: "266806697048"
 };
 firebase.initializeApp(fbconfig)
 // error handler
