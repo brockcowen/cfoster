@@ -22,10 +22,21 @@ html
 			$('.dumbCrossFade .dumbItem').dumbCrossFade({'slideType':'slidevertical','fadeInOut':true,});
 			});
 			/* ]]> */
+
 		
 	body
 		script(src='https://www.gstatic.com/firebasejs/3.7.4/firebase.js')
 		//insert firebase init
+		script.
+			var config = {
+			apiKey: "AIzaSyBQ5RotqJwPRQAdcz3WEytPuo-CgePutEE",
+			authDomain: "cfosterwebsite.firebaseapp.com",
+			databaseURL: "https://cfosterwebsite.firebaseio.com",
+			projectId: "cfosterwebsite",
+			storageBucket: "cfosterwebsite.appspot.com",
+			messagingSenderId: "266806697048"
+			};
+			firebase.initializeApp(config);
 		.headercon
 			.header
 				ul

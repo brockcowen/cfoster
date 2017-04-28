@@ -16,13 +16,28 @@
 			modal.style.display = "block";
 			}
 
+			function newsletterSignup(name, email){
+				var database = firebase.database().ref('newsletterSignup')
+				var newsletterSignupKey= firebase.database().ref().child('newsletterSignup').push().key;
+					var postData = {
+						email: email,
+						name: name
+							}
+					var updates = {};
+						updates['/newsletterSignup/' + newsletterSignupKey ] = postData;
+						updates['/emailList/'+ postData.email]= newsletterSignupKey;
+ 							return firebase.database().ref().update(updates);
+			}
 			submitBtn.onclick = function(){
 				
 				var name = nameInput.value;
 				var email= emailInput.value;
 				//check and send status
+
+
 				if (name && email){
-					console.log(name+' '+email)
+					newsletterSignup(name, email);
+
 					frmStatusDiv.innerHTML= "<div class='alert success'>"+
   					"<span class='closebtn'>&times;</span>"+  
   					"<strong>Success!</strong> Indicates a successful or positive action."+
@@ -100,12 +115,7 @@
 			modal.style.display = "none";
 			}
 			}
-				var database = firebase.database().ref('messages');
-  res.render('modal');
-  var messagesRef = database;
-  messagesRef.on('value', function(snapshot){
-  	console.log(snapshot.val());
-  })
+
         // Get the parent of <span class="closebtn"> (<div class="alert">)
        
 
